@@ -1,6 +1,6 @@
 {
-    "id": "nodebb-theme-quickstart",
-    "name": "My Theme Name",
-    "description": "Enter a description here",
-    "url": "https://github.com/nodebb/nodebb-theme-quickstart"
+    "id": "nodebb-theme-connect2",
+    "name": "Connect2",
+    "description": "Child harmony forum connect",
+    "url": "https://github.com/nodebb/nodebb-theme-connect2"
 }
