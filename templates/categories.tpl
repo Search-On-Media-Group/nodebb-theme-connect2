@@ -10,6 +10,19 @@
 		{{{ end }}}
 		<ul class="categories-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList">
 			{{{ each categories }}}
+			{{{ if ./children.length }}}
+				child
+				{{{ each ./children }}}
+					<div>
+						{./name}
+						{{{ if ./children.length }}}
+							{{{ each ./children }}}
+								<div>{./name}</div>
+							{{{ end }}}
+						{{{ end }}}
+					</div>
+				{{{ end }}}
+			{{{ end }}}
 			<!-- IMPORT partials/categories/item.tpl -->
 			{{{ end }}}
 		</ul>
