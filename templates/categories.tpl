@@ -2,7 +2,7 @@
 	{{{ each widgets.header }}}
 	{{widgets.header.html}}
 	{{{ end }}}
-</div>eeeee
+</div>
 <div class="row py-2">
 	<div class="{{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		{{{ if pagination.pages.length }}}
