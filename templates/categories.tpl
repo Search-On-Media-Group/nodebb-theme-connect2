@@ -10,20 +10,27 @@
 		{{{ end }}}
 		<ul class="categories-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList">
 			{{{ each categories }}}
+			<!-- IMPORT partials/categories/item-c.tpl -->
 			{{{ if ./children.length }}}
-				child
+				<!-- IMPORT partials/categories/item.tpl -->
 				{{{ each ./children }}}
 					<div>
-						{./name}
+						<div class="d-flex align-items-start gap-1">
+							<i class="fa fa-fw fa-caret-right text-primary mt-1"></i>
+							<a href="{config.relative_path}/category/{./slug}" class="text-reset fw-semibold">{./name}</a>
+						</div>
 						{{{ if ./children.length }}}
 							{{{ each ./children }}}
-								<div>{./name}</div>
+							<div class="d-flex align-items-start gap-1">
+								<i class="fa fa-fw fa-caret-right text-primary mt-1"></i>
+								<a href="{config.relative_path}/category/{./slug}" class="text-reset fw-semibold">{./name}</a>
+							</div>
 							{{{ end }}}
 						{{{ end }}}
 					</div>
 				{{{ end }}}
 			{{{ end }}}
-			<!-- IMPORT partials/categories/item.tpl -->
+			
 			{{{ end }}}
 		</ul>
 
