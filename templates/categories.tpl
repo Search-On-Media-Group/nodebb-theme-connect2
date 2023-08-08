@@ -8,29 +8,25 @@
 		{{{ if pagination.pages.length }}}
 		<div><!-- IMPORT partials/category/selector-dropdown-left.tpl --></div>
 		{{{ end }}}
-		<ul class="categories-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList">
+		
+		<ul class="main-categories-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList">
 			{{{ each categories }}}
-			<!-- IMPORT partials/categories/item-c.tpl -->
-			{{{ if ./children.length }}}
-				<!-- IMPORT partials/categories/item.tpl -->
-				{{{ each ./children }}}
-					<div>
-						<div class="d-flex align-items-start gap-1">
-							<i class="fa fa-fw fa-caret-right text-primary mt-1"></i>
-							<a href="{config.relative_path}/category/{./slug}" class="text-reset fw-semibold">{./name}</a>
-						</div>
-						{{{ if ./children.length }}}
+				<li>
+					<h2 class="title text-break fs-4 fw-semibold m-0 tracking-tight w-100">aa 
+						<!-- IMPORT partials/categories/link.tpl -->
+					</h2>
+				
+					{{{ if ./children.length }}}
+						<ul class="categories-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList">
 							{{{ each ./children }}}
-							<div class="d-flex align-items-start gap-1">
-								<i class="fa fa-fw fa-caret-right text-primary mt-1"></i>
-								<a href="{config.relative_path}/category/{./slug}" class="text-reset fw-semibold">{./name}</a>
-							</div>
-							{{{ end }}}
-						{{{ end }}}
-					</div>
-				{{{ end }}}
-			{{{ end }}}
-			
+						
+							
+							<!-- IMPORT partials/categories/item.tpl -->
+							{{{ end }}}	
+						</ul>
+						
+					{{{ end }}}
+				</li>
 			{{{ end }}}
 		</ul>
 
