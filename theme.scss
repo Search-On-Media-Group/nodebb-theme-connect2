@@ -47,7 +47,10 @@
     }
 
     .post-footer.border-bottom{
-        border-bottom:0 none;
+        border-bottom:0 none!important;
+    }
+    [component="post/actions"]{
+        opacity: 1;
     }
 }
 .topic .pagination-block .scroller-container {
