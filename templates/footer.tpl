@@ -12,6 +12,6 @@
 	</div>
 	{{{ end }}}
 
-	<!-- IMPORT partials/footer/js.tpl -->
+	<!-- NO-IMPORT partials/footer/js.tpl -->
 </body>
 </html>

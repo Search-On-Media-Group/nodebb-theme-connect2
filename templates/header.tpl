@@ -25,10 +25,28 @@
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
 	<div class="layout-container d-flex justify-content-between pb-4 pb-md-0">
+		<div>
+			<!-- IMPORT partials/header/brand.tpl -->
+		</div>
+		<div>
+			{{{ if config.loggedIn }}}
+			<ul id="logged-in-menu" class="list-unstyled d-flex flex-row h-100 gap-2 ml-2">
+			<!-- IMPORT customPartials/top-logged-in-menu.tpl -->
+			</ul>
+			{{{ else }}}
+			<ul id="logged-out-menu" class="list-unstyled d-flex flex-rw h-100 gap-2 ml-2">
+			<!-- IMPORT customPartials/top-logged-out-menu.tpl -->
+			</ul>
+			{{{ end }}}
+
+		</div>
+	</div>
+	<div class="layout-container d-flex justify-content-between pb-4 pb-md-0">
 		<!-- IMPORT partials/sidebar-left.tpl -->
 
 		<main id="panel" class="d-flex flex-column gap-3 flex-grow-1 mt-3" style="min-width: 0;">
-			<!-- IMPORT partials/header/brand.tpl -->
+			
+			
 			<script>
 				const headerEl = document.getElementById('header-menu');
 				if (headerEl) {
