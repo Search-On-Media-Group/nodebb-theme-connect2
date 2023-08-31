@@ -24,12 +24,10 @@
 </head>
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
-	<div class="layout-container d-flex justify-content-between align-items-center">
+	<div class="connect-top-header layout-container d-flex align-items-center">
 		<div class="d-flex  gap-3">
 			{{{ if (brand:logo || config.showSiteTitle)}}}
-			
-				
-					<div component="brand/wrapper" class="d-flex align-items-center gap-3  rounded-1 align-content-stretch ">
+					<div component="brand/wrapper" class="d-flex align-items-center gap-3 rounded-1 align-content-stretch ">
 						{{{ if brand:logo }}}
 						<a component="brand/anchor" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
 							<img component="brand/logo" alt="{brand:logo:alt}" class="{brand:logo:display}" src="{brand:logo}?{config.cache-buster}" />
@@ -53,7 +51,35 @@
 			
 			{{{ end }}}
 		</div>
-		<div class="pe-2">
+		<div class="pe-2 d-flex justify-content-between align-items-center" style="flex:1">
+			<ul class="list-unstyled d-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
+				{{{ if config.searchEnabled }}}
+				<li component="sidebar/search" class="nav-item mx-2 search dropstart position-relative" title="[[global:header.search]]">
+				<form component="search/form" id="search-form" class="d-flex justify-content-end align-items-center" role="search" method="GET">
+						<div component="search/fields" class="w-100" id="search-fields">
+							<div class="d-flex gap-1">
+								<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
+
+								<div class="btn-ghost advanced-search-link">
+									<i class="fa fa-gears fa-fw text-muted"></i>
+								</div>
+							</div>
+
+							<div id="quick-search-container" class="quick-search-container d-block mt-2 hidden">
+								<div class="form-check filter-category mb-2 ms-2">
+									<input class="form-check-input" type="checkbox" checked>
+									<label class="form-check-label name text-sm"></label>
+								</div>
+
+								<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
+								<div class="quick-search-results-container"></div>
+							</div>
+							<button type="submit" class="btn btn-outline-secondary hide">[[global:search]]</button>
+						</div>
+					</form>
+				</li>
+				{{{ end }}}
+			</ul>
 			{{{ if config.loggedIn }}}
 			<ul id="logged-in-menu" class="list-unstyled d-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
 			<!-- IMPORT customPartials/top-logged-in-menu.tpl -->
