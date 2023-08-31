@@ -24,17 +24,42 @@
 </head>
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
-	<div class="layout-container d-flex justify-content-between pb-4 pb-md-0">
-		<div>
-			<!-- IMPORT partials/header/brand.tpl -->
+	<div class="layout-container d-flex justify-content-between align-items-center">
+		<div class="d-flex  gap-3">
+			{{{ if (brand:logo || config.showSiteTitle)}}}
+			
+				
+					<div component="brand/wrapper" class="d-flex align-items-center gap-3  rounded-1 align-content-stretch ">
+						{{{ if brand:logo }}}
+						<a component="brand/anchor" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
+							<img component="brand/logo" alt="{brand:logo:alt}" class="{brand:logo:display}" src="{brand:logo}?{config.cache-buster}" />
+						</a>
+						{{{ end }}}
+
+						{{{ if config.showSiteTitle }}}
+						<a component="siteTitle" class="text-truncate align-self-stretch align-items-center d-flex" href="{{{ if title:url }}}{title:url}{{{ else }}}{relative_path}/{{{ end }}}">
+							<h1 class="fs-6 fw-bold text-body mb-0">{config.siteTitle}</h1>
+						</a>
+						{{{ end }}}
+					</div>
+					{{{ if widgets.brand-header.length }}}
+					<div data-widget-area="brand-header" class="flex-fill gap-3 p-2 align-self-center">
+						{{{each widgets.brand-header}}}
+						{{./html}}
+						{{{end}}}
+					</div>
+					{{{ end }}}
+				
+			
+			{{{ end }}}
 		</div>
-		<div>
+		<div class="pe-2">
 			{{{ if config.loggedIn }}}
-			<ul id="logged-in-menu" class="list-unstyled d-flex flex-row h-100 gap-2 ml-2">
+			<ul id="logged-in-menu" class="list-unstyled d-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
 			<!-- IMPORT customPartials/top-logged-in-menu.tpl -->
 			</ul>
 			{{{ else }}}
-			<ul id="logged-out-menu" class="list-unstyled d-flex flex-rw h-100 gap-2 ml-2">
+			<ul id="logged-out-menu" class="list-unstyled d-flex align-items-center flex-rw h-100 gap-2 mb-0 ml-2">
 			<!-- IMPORT customPartials/top-logged-out-menu.tpl -->
 			</ul>
 			{{{ end }}}
