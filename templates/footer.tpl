@@ -1,7 +1,7 @@
 
 			</div><!-- /.container#content -->
 		</main>
-		<!-- IMPORT partials/sidebar-right.tpl -->
+		<!-- NO-IMPORT partials/sidebar-right.tpl -->
 	</div>
 	<!-- IMPORT partials/mobile-footer.tpl -->
 	{{{ if !isSpider }}}
@@ -12,6 +12,6 @@
 	</div>
 	{{{ end }}}
 
-	<!-- NO-IMPORT partials/footer/js.tpl -->
+	<!-- IMPORT partials/footer/js.tpl -->
 </body>
 </html>
