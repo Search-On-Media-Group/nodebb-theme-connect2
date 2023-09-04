@@ -1,7 +1,7 @@
 
 			</div><!-- /.container#content -->
 		</main>
-		<!-- NO-IMPORT partials/sidebar-right.tpl -->
+		<!-- IMPORT partials/sidebar-right.tpl -->
 	</div>
 	<!-- IMPORT partials/mobile-footer.tpl -->
 	{{{ if !isSpider }}}
