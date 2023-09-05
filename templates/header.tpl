@@ -92,6 +92,7 @@
 
 		</div>
 	</div>
+	<!-- noIMPORT partials/header-connect.tpl -->
 	<div class="layout-container d-flex justify-content-between pb-4 pb-md-0">
 		<!-- IMPORT partials/sidebar-left.tpl -->
 
