@@ -44,6 +44,11 @@
 //header 
 .connect-top-header{
     background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    left: 0;
+    right: 0;
     .brand-container-connect{
         @media (min-width: 992px){
             flex:0 0 300px;
