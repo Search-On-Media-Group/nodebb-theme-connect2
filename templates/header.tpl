@@ -25,7 +25,7 @@
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
 	<div class="connect-top-header layout-container d-flex align-items-center">
-		<div class="d-flex  gap-3">
+		<div class="d-flex  gap-3 brand-container-connect">
 			{{{ if (brand:logo || config.showSiteTitle)}}}
 					<div component="brand/wrapper" class="d-flex align-items-center gap-3 rounded-1 align-content-stretch ">
 						{{{ if brand:logo }}}
@@ -51,7 +51,7 @@
 			
 			{{{ end }}}
 		</div>
-		<div class="pe-2 d-flex justify-content-between align-items-center" style="flex:1">
+		<div class="pe-2 d-flex justify-content-between align-items-center " style="flex:1">
 			<ul class="list-unstyled d-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
 				{{{ if config.searchEnabled }}}
 				<li component="sidebar/search" class="nav-item mx-2 search dropstart position-relative" title="[[global:header.search]]">
@@ -81,11 +81,11 @@
 				{{{ end }}}
 			</ul>
 			{{{ if config.loggedIn }}}
-			<ul id="logged-in-menu" class="list-unstyled d-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
+			<ul id="logged-in-menu" class="list-unstyled d-none d-lg-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
 			<!-- IMPORT customPartials/top-logged-in-menu.tpl -->
 			</ul>
 			{{{ else }}}
-			<ul id="logged-out-menu" class="list-unstyled d-flex align-items-center flex-rw h-100 gap-2 mb-0 ml-2">
+			<ul id="logged-out-menu" class="list-unstyled d-none d-lg-flex align-items-center flex-rw h-100 gap-2 mb-0 ml-2">
 			<!-- IMPORT customPartials/top-logged-out-menu.tpl -->
 			</ul>
 			{{{ end }}}

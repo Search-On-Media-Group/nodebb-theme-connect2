@@ -1,4 +1,4 @@
-<nav component="sidebar/left" class="{{{ if config.theme.openSidebars}}}open{{{ end }}} text-dark bg-light sidebar sidebar-left start-0 border-end vh-100 d-none d-lg-flex flex-column justify-content-between sticky-top">
+<nav component="sidebar/left" class="open {{{ if config.theme.openSidebars}}}open{{{ end }}} text-dark sidebar sidebar-left start-0 border-end d-none d-lg-flex flex-column justify-content-between sticky-top">
 	<ul id="main-nav" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2">
 		{{{ each navigation }}}
 		{{{ if displayMenuItem(@root, @index) }}}
@@ -27,9 +27,9 @@
 		{{{ end }}}
 		{{{ end }}}
 	</ul>
-	<div class="w-100">
+	<!-- <div class="w-100">
 		{{{ if !config.disableCustomUserSkins }}}
-		<!-- IMPORT partials/skin-switcher.tpl -->
+		<z!-- IMPORT partials/skin-switcher.tpl --s>
 		{{{ end }}}
 
 		<div class="sidebar-toggle m-2 d-none d-lg-block">
@@ -39,5 +39,5 @@
 				<span class="nav-text visible-open fw-semibold small lh-1">[[themes/harmony:collapse]]</span>
 			</a>
 		</div>
-	</div>
+	</div> -->
 </nav>
