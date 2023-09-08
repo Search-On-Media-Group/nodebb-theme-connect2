@@ -41,6 +41,14 @@
     color: #fff!important;
 }
 }
+.sidebar .nav-link.active {
+    background-color: #e3e4e51a;
+    color: var(--bs-primary);
+}
+.sidebar .nav-btn:hover {
+    background-color: #e3e4e5;
+    color: #2b333e;
+}
 //header 
 .connect-top-header{
     background: #fff;
@@ -156,5 +164,13 @@
         margin-bottom: 15px;
         border-left: 0 none;
     }
+}
+}
+
+//composer
+@media (max-width: 575.98px){
+html.composing .composer {
+    margin-top: 40px;
+    height: calc(100% - 40px)!important;
 }
 }

@@ -24,7 +24,7 @@
 </head>
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
-	<div class="connect-top-header layout-container d-flex align-items-center">
+	<div class="connect-top-header layout-container d-flex ">
 		<div class="d-flex  gap-3 brand-container-connect">
 			{{{ if (brand:logo || config.showSiteTitle)}}}
 					<div component="brand/wrapper" class="d-flex align-items-center gap-3 rounded-1 align-content-stretch ">
