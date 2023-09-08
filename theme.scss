@@ -57,6 +57,31 @@
         
         }
     }
+    .search{
+        .input-group{
+            border: 2px solid #bec0c2;
+            border-radius: 5px;
+            .btn, .form-control{
+                background: #fff;
+                box-shadow: none;
+                border: 0;
+            }
+        }
+        .quick-search-container{
+           
+                position: absolute;
+                left: 5px;
+                right: 5px;
+                top: 40px;
+                border: 1px solid #eee;
+                background: #fff;
+                padding: 5px;
+                font-size: 12px;
+                border-radius:0 0 5px 5px;
+                margin-top:0;
+                box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        }
+    }
 }
 //.post-container {
 .page-topic .topic .posts.timeline > [component=post]{
