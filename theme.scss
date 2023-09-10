@@ -39,6 +39,7 @@
     width: 300px;
     background-color: #2b333e!important;
     color: #fff!important;
+    min-height: calc(100vh - 48px);
 }
 }
 .sidebar .nav-link.active {
@@ -57,11 +58,17 @@
     z-index: 99999;
     left: 0;
     right: 0;
+    min-height: 48px;
     .brand-container-connect{
-        @media (min-width: 992px){
-            flex:0 0 300px;
+        [component="brand/logo"]{
+            max-width: 100%;
+        }
             justify-content: center;
             background: #3781d6;
+            flex:0 0 100px;
+        @media (min-width: 600px){
+            flex:0 0 300px;
+            
         
         }
     }

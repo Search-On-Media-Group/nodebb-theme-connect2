@@ -1,4 +1,4 @@
-<nav component="sidebar/left" class="open {{{ if config.theme.openSidebars}}}open{{{ end }}} text-dark sidebar sidebar-left start-0 border-end d-none d-lg-flex flex-column justify-content-between sticky-top">
+<nav component="sidebar/left" class="open {{{ if config.theme.openSidebars}}}open{{{ end }}} text-dark sidebar sidebar-left start-0 d-none d-lg-flex flex-column justify-content-between">
 	<ul id="main-nav" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2">
 		{{{ each navigation }}}
 		{{{ if displayMenuItem(@root, @index) }}}
