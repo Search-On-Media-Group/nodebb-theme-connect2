@@ -41,6 +41,10 @@
             background-color: #2b333e!important;
             color: #fff!important;
             min-height: calc(100vh - 48px);
+            #main-nav{
+                position: sticky;
+                top: 57px;
+            }
         }
         .special a.nav-link {
             
@@ -205,7 +209,16 @@
     }
 }
 }
+//cover gruppi e profilo 
+.groups.details, .account{
+    @media (min-width: 768px) {
+        margin-top:20px!important;
+        .cover {
+            position: static!important;
+        }
+    }
 
+}
 //composer
 @media (max-width: 575.98px){
 html.composing .composer {
