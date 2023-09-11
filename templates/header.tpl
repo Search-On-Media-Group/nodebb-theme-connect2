@@ -51,7 +51,7 @@
 			
 			{{{ end }}}
 		</div>
-		<div class="pe-2 d-flex justify-content-between align-items-center " style="flex:1">
+		<div class="pe-2 d-none d-lg-flex justify-content-between align-items-center " style="flex:1">
 			<ul class="list-unstyled d-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
 				{{{ if config.searchEnabled }}}
 				<li component="sidebar/search" class="nav-item mx-2 search dropstart position-relative" title="[[global:header.search]]">
@@ -82,16 +82,21 @@
 				{{{ end }}}
 			</ul>
 			{{{ if config.loggedIn }}}
-			<ul id="logged-in-menu" class="list-unstyled d-none d-lg-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
+			<ul id="logged-in-menu" class="list-unstyled d-flex align-items-center flex-row h-100 gap-2 mb-0 ml-2">
 			<!-- IMPORT customPartials/top-logged-in-menu.tpl -->
 			</ul>
 			{{{ else }}}
-			<ul id="logged-out-menu" class="list-unstyled d-none d-lg-flex align-items-center flex-rw h-100 gap-2 mb-0 ml-2">
+			<ul id="logged-out-menu" class="list-unstyled d-flex align-items-center flex-rw h-100 gap-2 mb-0 ml-2">
 			<!-- IMPORT customPartials/top-logged-out-menu.tpl -->
 			</ul>
 			{{{ end }}}
 
 		</div>
+		<ul class="list-unstyled top-mobile-links">
+			<li class="nav-item"><a class="nav-link nav-btn" href="/stream">STREAM</a></li>
+			<li class="nav-item"><a class="nav-link nav-btn" href="/stream">INTEREST</a></li>
+			<li class="nav-item"><a class="nav-link nav-btn" href="/stream">CATEGORIES</a></li>
+		</ul>
 	</div>
 	<!-- noIMPORT partials/header-connect.tpl -->
 	<div class="layout-container d-flex justify-content-between pb-4 pb-md-0">

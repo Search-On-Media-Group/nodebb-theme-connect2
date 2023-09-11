@@ -108,6 +108,32 @@
     right: 0;
     min-height: 48px;
     box-shadow: 0 1px #00000017;
+    .top-mobile-links{
+        justify-self: center;
+        display: flex;
+        flex: 1;
+        align-self: center;
+        font-size: 13px;
+        padding: 0 10px;
+        margin: 0;
+        gap: 5px;
+        justify-content: flex-end;
+        min-height: 44px;
+        align-items: center;
+        li{
+            a{
+                line-height: 44px;
+                padding:0 5px;
+                font-weight: 700;
+            }
+            @media (min-width: 600px){
+            border-left:1px solid #eee;
+            }
+        }
+        @media (min-width: 992px){
+            display: none;
+        }
+    }
     .brand-container-connect{
         [component="brand/logo"]{
             max-width: 100%;
@@ -241,4 +267,29 @@ html.composing .composer {
     margin-top: 40px;
     height: calc(100% - 40px)!important;
 }
+}
+//bottombar mob
+.skin-noskin .bottombar-nav {
+    border-top: 1px solid #bec0c2;
+    transition: background 350ms linear;
+    .titlemenu a {
+        cursor: default;
+        display: block;
+        color: #666!important;
+        text-transform: uppercase;
+        margin-top: 20px;
+        .nav-text {
+            color: #c6c6c6;
+        }
+        .fa{
+            display: none;;
+        }
+    }
+    &:has(.show) {
+        background: #3781d6!important;
+        color: #fff!important;
+    }
+}
+body:has(.bottombar-nav .show) #panel {
+    filter: blur(2px) saturate(0.3);
 }
