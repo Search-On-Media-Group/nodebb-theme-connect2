@@ -3,8 +3,31 @@
 	{{widgets.header.html}}
 	{{{ end }}}
 </div>
+
 <div class="row py-2">
 	<div class="{{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
+		
+		{{{ if config.loggedIn }}}
+		
+		<div class="c-card c-card-discussione" onclick="app.newTopic();">
+			<div class="nuovaDiscussione">
+				<div class="h4 "><i class="fa fa-comments" aria-hidden="true"></i> Inizia una nuova discussione</div>
+					<div class="writePost">
+						<span class="writePost-icon">
+							<label class="nav-link nav-btn text-truncate d-flex gap-2 align-items-center" data-bs-toggle="dropdown" id="user_dropdown" role="button" component="header/avatar">
+								{buildAvatar(loggedInUser, "50px", true)}
+								<span id="user-header-name" class="nav-text small visible-open fw-semibold">{user.username}</span>
+							</label>
+										<span id="user-header-name" class="visible-xs-inline">enricominciamo</span>
+									</span>
+						<div class="writePost-txt connect_new_topic">
+							di cosa vuoi parlare?
+						</div>
+					</div>	
+			</div>
+		</div>
+		{{{ end }}}
+
 		{{{ if pagination.pages.length }}}
 		<div><!-- IMPORT partials/category/selector-dropdown-left.tpl --></div>
 		{{{ end }}}
