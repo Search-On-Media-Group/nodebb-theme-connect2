@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-connect2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Enter a description here",
   "main": "theme.less",
   "private": true,
