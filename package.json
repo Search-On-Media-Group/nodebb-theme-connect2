@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-connect-v2",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Enter a description here",
   "main": "theme.less",
   "keywords": [],
