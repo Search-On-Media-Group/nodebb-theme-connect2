@@ -1,5 +1,5 @@
 {
-  "name": "nodebb-theme-connect-v2",
+  "name": "@andrea.dragotta/nodebb-theme-connect-v2",
   "version": "0.1.5",
   "description": "Enter a description here",
   "main": "theme.less",
