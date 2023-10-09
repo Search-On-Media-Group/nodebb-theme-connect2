@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "Enter a description here",
   "main": "theme.less",
+  "private": true,
   "keywords": [],
   "license": "MIT",
   "husky": {
