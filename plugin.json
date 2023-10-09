@@ -14,10 +14,10 @@
     },
     { "hook": "filter:middleware.render", "method": "removeFinalBreadcrumb" }
   ],
-  "scripts": ["../nodebb-theme-harmony/public/harmony.js"],
+  "scripts": ["../../nodebb-theme-harmony/public/harmony.js"],
   "modules": {
-    "../admin/plugins/harmony.js": "../nodebb-theme-harmony/public/admin.js",
-    "../client/account/theme.js": "../nodebb-theme-harmony/public/settings.js"
+    "../admin/plugins/harmony.js": "../../nodebb-theme-harmony/public/admin.js",
+    "../client/account/theme.js": "../../nodebb-theme-harmony/public/settings.js"
   },
   "staticDirs": {
     "inter": "node_modules/@fontsource/inter/files",
