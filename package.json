@@ -5,6 +5,7 @@
   "main": "theme.less",
   "keywords": [],
   "license": "MIT",
+  "templates": "./nodebb-theme-connect-v2",
   "husky": {
     "hooks": {
       "pre-commit": "npx lint-staged",

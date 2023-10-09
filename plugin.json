@@ -1,5 +1,5 @@
 {
-  "id": "nodebb-theme-connect-v2",
+  "id": "@andrea.dragotta/nodebb-theme-connect-v2",
   "hooks": [
     { "hook": "static:app.load", "method": "init" },
     { "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
